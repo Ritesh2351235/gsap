@@ -18,8 +18,10 @@ const App = () => {
   return (
     <>
       <div className="w-full relative min-h-screen  font-['Helvetica_Now_Display', san-serif]">
-        {showCanvas &&
-          data[0].map((canvasdets, index) => <Canvas key={index} details={canvasdets} />)}
+
+        <div>
+          {data[0].map((canvasdets, index) => <Canvas key={index} details={canvasdets} />)}
+        </div>
         <nav className="w-full p-8 flex justify-between z-50">
           <div className="brand text-2xl font-md">thirtysixstudios</div>
           <div className="links flex gap-10">
@@ -55,8 +57,9 @@ const App = () => {
         </div>
       </div>
       <div className="w-full relative min-h-screen  font-['Helvetica_Now_Display', san-serif]">
-        {showCanvas &&
-          data[1].map((canvasdets, index) => <Canvas key={index} details={canvasdets} />)}
+        <div>
+          {data[1].map((canvasdets, index) => <Canvas key={index} details={canvasdets} />)}
+        </div>
         <div className='w-screen px-[20%] mx-[0%] mt-[10%] flex'>
           <div className=' mr-[30%]'>
             <h2 className='text-4xl font-regular'>
