@@ -7,14 +7,12 @@ import LocomotiveScroll from 'locomotive-scroll';
 
 
 const App = () => {
-  const [showCanvas, setShowCanvas] = useState(false);
+
   const headingref = useRef(null);
   useEffect(() => {
     const locomotiveScroll = new LocomotiveScroll();
-    headingref.current.addEventListener("click", () => {
-      setShowCanvas(!showCanvas);
-    })
-  }, [showCanvas])
+
+  }, [])
   return (
     <>
       <div className="w-full relative min-h-screen  font-['Helvetica_Now_Display', san-serif]">
@@ -23,7 +21,7 @@ const App = () => {
           {data[0].map((canvasdets, index) => <Canvas key={index} details={canvasdets} />)}
         </div>
         <nav className="w-full p-8 flex justify-between z-50">
-          <div className="brand text-2xl font-md">thirtysixstudios</div>
+          <div className="brand text-2xl font-md">pepperstudios</div>
           <div className="links flex gap-10">
             {["Home", "About", "Projects", "Contact"].map((link, index) => (
               <a
@@ -39,7 +37,7 @@ const App = () => {
         <div className='w-full px-[20%] relative'>
           <div className='text w-[38%]'>
             <h3 className='text-3xl font-light'>
-              At Thirtysixstudio, we build immersive digital experiences for
+              At Pepperstudio, we build immersive digital experiences for
               brands with a purpose.
             </h3>
 
@@ -48,12 +46,12 @@ const App = () => {
               motion, and creative technology, constantly reimagining what digital craft can do for present-time ads and campaigns.
             </p>
             <p className='text-md font-regular mt-5'>
-              click on thirtysixstudios
+              click on pepperstudios
             </p>
           </div>
         </div>
         <div className='w-full absolute bottom-0 left-0'>
-          <h1 ref={headingref} className='text-[14rem] font-normal tracking-tight pr-10'>thirtysixstudios</h1>
+          <h1 ref={headingref} className='text-[14rem] font-normal tracking-tight pr-10'>pepperstudios</h1>
         </div>
       </div>
       <div className="w-full relative min-h-screen  font-['Helvetica_Now_Display', san-serif]">
